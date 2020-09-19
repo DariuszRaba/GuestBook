@@ -1,0 +1,45 @@
+body{
+    background-color: dimgray;
+}
+#container{
+    display:grid;
+    background-color: gray;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+#header{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#user-input{
+    width: 75%;
+    display: grid;
+    grid-template-columns: 100px 3fr;
+    grid-template-rows: auto auto auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#guest-book{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color:gray;
+    text-align: center;
+}
+
+.comment-div{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color:gray;
+    text-align: center;
+}
+

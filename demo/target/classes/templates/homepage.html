@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Guest Book Application</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+
+<body>
+<div id="container">
+    <div id="header">
+        <h1>Welcome to Guest Book</h1>
+    </div>
+    <form action="#" th:action="@{/home}" th:object="${form}" method="post">
+        <div id="user-input">
+
+            <div class="description"> Name:</div>
+            <input type="text" name="name"/>
+            <br>
+
+            <div class="description"> Comment :</div>
+            <input type="text" name="comment"/>
+            <br>
+
+            <input type="submit"/>
+        </div>
+
+    </form>
+
+</div>
+
+<!--<div id="guest-book">-->
+<tr th:each="guest: ${guest}">
+    <div class="comment-div">
+        <td th:text="${guestStat.index+1} + '.' + ${guest.name}"/>
+        <!--        <td th:text="':' "/>-->
+        <br>
+        <td th:text="${guest.comment}"/>
+        <br>
+        <td th:text="${guest.date}"/>
+        <br>
+        <a th:href="${'update/' + guestStat.index}"> Edit Motherfucker </a>
+        <br>
+    </div>
+</tr>
+<!--</div>-->
+</body>
+
+</html>

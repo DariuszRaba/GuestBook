@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>update</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+
+<body>
+
+<div id="guest-book">
+    <form th:action="${TheGuestId}" th:object="${TheGuest}" method="post">
+        <input type="text" name="name" th:value="${TheGuest.name}"><br>
+        <input type="text" name="comment" th:value="${TheGuest.getComment()}"><br>
+        <button type="submit">UPDATE</button>
+    </form>
+    <a href="/home"><button type="button">HOME</button></a>
+    <form th:action="${TheGuestId}+ '/delete'" th:object="${TheGuest}" method="post">
+
+        <button type="submit">DELETE</button>
+    </form>
+</div>
+</body>
+
+</html>
